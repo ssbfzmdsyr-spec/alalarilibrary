@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مكتبة العلاري | متجر الكتب والقرطاسية</title>
+  <meta name="description" content="متجر مكتبة العلاري للكتب والقرطاسية والمستلزمات المدرسية مع سلة وطلبات واتساب.">
+  <meta name="theme-color" content="#0a314b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="مكتبة العلاري">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta property="og:title" content="مكتبة العلاري">
+  <meta property="og:description" content="تسوق الكتب والقرطاسية والمستلزمات المدرسية واطلب عبر واتساب.">
+  <meta property="og:image" content="alalari-logo.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="alalari-mark.png">
+  <link rel="apple-touch-icon" href="alalari-mark.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="مكتبة العلاري">
+      <img src="alalari-mark.png" alt="">
+      <span>
+        <strong id="brandName">مكتبة العلاري</strong>
+        <small>Al-Alaari Library</small>
+      </span>
+    </a>
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <a href="#shop">المتجر</a>
+      <a href="#offers">العروض</a>
+      <a href="#checkout">الطلب</a>
+      <a href="#contact">التواصل</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="adminOpen" type="button" aria-label="لوحة التحكم">
+        <span aria-hidden="true">⚙</span>
+      </button>
+      <button class="cart-button" id="cartOpen" type="button">
+        <span aria-hidden="true">🛒</span>
+        <span>السلة</span>
+        <strong id="cartCount">0</strong>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="hero-card">
+          <img src="alalari-logo.png" alt="شعار مكتبة العلاري">
+          <span id="heroPhone">واتساب: +972569740120</span>
+        </div>
+        <div class="hero-copy">
+          <span class="kicker">كتب، قرطاسية، ومستلزمات مدرسية</span>
+          <h1 id="heroTitle">مكتبة العلاري</h1>
+          <p id="heroText">متجر مرتب للطلاب والمعلمين: اختار المنتجات، أضفها للسلة، وأرسل الطلب مباشرة عبر واتساب.</p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#shop">ابدأ التسوق</a>
+            <button class="secondary-action" id="quickCart" type="button">عرض السلة</button>
+          </div>
+          <div class="hero-metrics">
+            <div>
+              <strong>₪</strong>
+              <span>أسعار بالشيكل</span>
+            </div>
+            <div>
+              <strong>WA</strong>
+              <span>طلبات واتساب</span>
+            </div>
+            <div>
+              <strong>RTL</strong>
+              <span>واجهة عربية</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-bar" aria-label="مميزات المتجر">
+      <div>
+        <strong>طلب سريع</strong>
+        <span>رسالة واتساب جاهزة بكل تفاصيل السلة</span>
+      </div>
+      <div>
+        <strong>إدارة المنتجات</strong>
+        <span>إضافة وتعديل وحذف من لوحة التحكم</span>
+      </div>
+      <div>
+        <strong>جاهز للنشر</strong>
+        <span>يعمل على أي استضافة مواقع ثابتة</span>
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">المتجر</span>
+          <h2>اختار منتجاتك</h2>
+        </div>
+        <p>ابحث أو اختر قسمًا، ثم أضف المنتجات للسلة.</p>
+      </div>
+
+      <div class="shop-tools">
+        <label class="search-wrap">
+          <span>بحث</span>
+          <input id="searchInput" type="search" placeholder="اسم المنتج...">
+        </label>
+        <div class="category-tabs" id="categoryTabs" aria-label="الأقسام"></div>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state" id="emptyState">لا توجد منتجات مطابقة.</div>
+    </section>
+
+    <section class="section offers" id="offers">
+      <div class="offer-panel">
+        <div>
+          <span class="section-kicker">عرض اليوم</span>
+          <h2 id="offerTitle">حقيبة الدراسة الكاملة</h2>
+          <p id="offerText">جهز طلب المدرسة كاملًا من مكان واحد: شنطة، دفاتر، أقلام، ألوان، وملفات.</p>
+        </div>
+        <button class="primary-action" id="offerAdd" type="button">أضف عرضًا للسلة</button>
+      </div>
+    </section>
+
+    <section class="section checkout-section" id="checkout">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">إتمام الطلب</span>
+          <h2>بيانات الزبون</h2>
+        </div>
+        <p>بعد تعبئة البيانات سيتم فتح واتساب برسالة الطلب.</p>
+      </div>
+      <form class="checkout-form" id="checkoutForm">
+        <label>
+          <span>الاسم الكامل</span>
+          <input name="customerName" type="text" required placeholder="مثال: أحمد محمد">
+        </label>
+        <label>
+          <span>رقم الهاتف</span>
+          <input name="customerPhone" type="tel" required dir="ltr" placeholder="+972...">
+        </label>
+        <label>
+          <span>طريقة الاستلام</span>
+          <select name="deliveryMethod">
+            <option value="استلام من الفرع">استلام من الفرع</option>
+            <option value="توصيل">توصيل</option>
+          </select>
+        </label>
+        <label>
+          <span>طريقة الدفع</span>
+          <select name="paymentMethod">
+            <option value="الدفع عند الاستلام">الدفع عند الاستلام</option>
+            <option value="تنسيق الدفع عبر واتساب">تنسيق الدفع عبر واتساب</option>
+          </select>
+        </label>
+        <label class="full">
+          <span>العنوان</span>
+          <input name="address" type="text" placeholder="المدينة، الشارع، أقرب معلم">
+        </label>
+        <label class="full">
+          <span>ملاحظات</span>
+          <textarea name="notes" placeholder="أي تفاصيل إضافية للطلب"></textarea>
+        </label>
+        <button class="primary-action full" type="submit">إرسال الطلب عبر واتساب</button>
+      </form>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div>
+        <span class="section-kicker">التواصل</span>
+        <h2>مكتبة العلاري</h2>
+        <p id="storeAddress">الشارع الرئيسي، بجوار المدرسة</p>
+      </div>
+      <div class="contact-cards">
+        <a id="whatsappLink" href="#" target="_blank" rel="noreferrer">واتساب</a>
+        <a id="phoneLink" href="#">اتصال</a>
+        <span id="storeHours">يوميًا من 9 صباحًا إلى 10 مساءً</span>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="سلة الشراء">
+    <div class="drawer-head">
+      <div>
+        <strong>سلة الشراء</strong>
+        <span id="cartSummary">0 منتجات</span>
+      </div>
+      <button class="icon-button" id="cartClose" type="button" aria-label="إغلاق">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-total">
+      <span>المجموع</span>
+      <strong id="cartTotal">₪0</strong>
+    </div>
+    <a class="primary-action" href="#checkout" id="checkoutJump">إتمام الطلب</a>
+    <button class="secondary-action" id="cartClear" type="button">تفريغ السلة</button>
+  </aside>
+
+  <aside class="admin-panel" id="adminPanel" aria-label="لوحة التحكم">
+    <div class="drawer-head">
+      <div>
+        <strong>لوحة التحكم</strong>
+        <span>إدارة المتجر</span>
+      </div>
+      <button class="icon-button" id="adminClose" type="button" aria-label="إغلاق">×</button>
+    </div>
+    <form class="admin-form" id="storeForm">
+      <label>
+        <span>اسم المتجر</span>
+        <input name="name" type="text">
+      </label>
+      <label>
+        <span>رقم واتساب</span>
+        <input name="whatsapp" type="text" dir="ltr">
+      </label>
+      <label>
+        <span>العنوان</span>
+        <input name="address" type="text">
+      </label>
+      <label>
+        <span>المواعيد</span>
+        <input name="hours" type="text">
+      </label>
+      <label class="full">
+        <span>وصف الواجهة</span>
+        <textarea name="heroText"></textarea>
+      </label>
+      <button class="primary-action full" type="submit">حفظ بيانات المتجر</button>
+    </form>
+
+    <form class="admin-form product-editor" id="productForm">
+      <input name="id" type="hidden">
+      <label>
+        <span>اسم المنتج</span>
+        <input name="name" type="text" required>
+      </label>
+      <label>
+        <span>السعر</span>
+        <input name="price" type="number" min="0" step="1" required>
+      </label>
+      <label>
+        <span>القسم</span>
+        <select name="category">
+          <option value="books">كتب</option>
+          <option value="stationery">قرطاسية</option>
+          <option value="school">مدرسي</option>
+          <option value="gifts">هدايا</option>
+        </select>
+      </label>
+      <label>
+        <span>الرمز</span>
+        <input name="icon" type="text" maxlength="4" placeholder="📘">
+      </label>
+      <label class="full">
+        <span>الوصف</span>
+        <textarea name="description" required></textarea>
+      </label>
+      <div class="admin-actions full">
+        <button class="primary-action" type="submit">حفظ المنتج</button>
+        <button class="secondary-action" id="newProduct" type="button">منتج جديد</button>
+      </div>
+    </form>
+
+    <div class="admin-products" id="adminProducts"></div>
+    <div class="admin-actions">
+      <button class="secondary-action" id="exportData" type="button">تصدير البيانات</button>
+      <button class="secondary-action danger" id="resetStore" type="button">استرجاع الأصل</button>
+    </div>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js").catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>

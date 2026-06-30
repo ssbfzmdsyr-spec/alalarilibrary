@@ -1,0 +1,26 @@
+{
+  "name": "مكتبة العلاري",
+  "short_name": "العلاري",
+  "description": "متجر مكتبة العلاري للكتب والقرطاسية والمستلزمات المدرسية.",
+  "dir": "rtl",
+  "lang": "ar",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f8f7",
+  "theme_color": "#0a314b",
+  "icons": [
+    {
+      "src": "alalari-mark.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "alalari-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
